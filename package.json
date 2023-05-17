@@ -1,0 +1,41 @@
+{
+  "name": "vitepress-plugin-gitalk",
+  "version": "1.0.0-alpha.1",
+  "description": "Provide Github Issue comment to your documentation site.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "components"
+  ],
+  "exports": {
+    ".": {
+      "require": "./lib/index.js"
+    },
+    "./Gitalk.vue": "./components/Gitalk.vue"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "vitepress",
+    "comment",
+    "plugin",
+    "gitalk"
+  ],
+  "author": "yuki <mail@yuki.sh>",
+  "license": "MIT",
+  "peerDependencies": {
+    "vitepress": "^1.0.0-alpha.75",
+    "vue": "^3.2.47"
+  },
+  "dependencies": {
+    "gitalk": "^1.8.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.4",
+    "vite": "^4.3.7",
+    "vitepress": "1.0.0-alpha.75",
+    "vue": "^3.3.2"
+  }
+}

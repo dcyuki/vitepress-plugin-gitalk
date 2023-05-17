@@ -1,22 +1,22 @@
 # vitepress-plugin-gitalk
 
-Provide Github Issue comment to your documentation site.
+向你的文档网站提供 Github Issue 评论区。
 
-Read this in other languages: English | [简体中文](./README.zh.md)
+使用其他语言阅读：[English](./README.md) | 简体中文
 
-## Install
+## 安装
 
 ```sh
 > npm i vitepress-plugin-gitalk
 ```
 
-or
+或者
 
 ```sh
 > yarn add vitepress-plugin-gitalk
 ```
 
-## Usage
+## 使用
 
 ```javascript
 import { defineConfig } from "vitepress";
@@ -48,7 +48,7 @@ export default defineConfig({
 
 ## Mustache
 
-How to customize the `id` option of gitalk?
+如何自定义 gitalk 的 `id` 选项？
 
 ```javascript
 import { defineConfig } from "vitepress";
@@ -65,7 +65,7 @@ export default defineConfig({
 });
 ```
 
-For dynamic parameters, you can use Mustache syntax for dynamic parsing.
+对于动态参数，可以使用 Mustache 语法做动态解析。
 
 ## Frontmatter
 
@@ -74,8 +74,8 @@ title: Docs with VitePress
 comments: false
 ```
 
-You can add `comments` attribute to YAML frontmatter close the comment.
+你可以在 YAML frontmatter 添加 `comments` 属性来关闭评论。
 
-## Options
+## 配置项
 
-You can [click here](https://github.com/gitalk/gitalk#options) to view the complete Options.
+你可以 [点击这里](https://github.com/gitalk/gitalk#options) 查看完整的配置项。
