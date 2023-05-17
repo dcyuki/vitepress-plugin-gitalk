@@ -26,20 +26,18 @@ import { GitalkPlugin, GitalkOptions } from "vitepress-plugin-gitalk";
 const options: GitalkOptions = {
   clientID: 'GitHub Application Client ID',
   clientSecret: 'GitHub Application Client Secret',
-  // The repository of store comments
   repo: 'GitHub repo',
   owner: 'GitHub repo owner',
   admin: [
     'GitHub repo owner and collaborators, only these guys can initialize github issues'
   ],
-  // Ensure uniqueness and length less than 50
-  id: location.pathname,
-  // Facebook-like distraction free mode
-  distractionFreeMode: false,
 };
 
 export default defineConfig({
   vite: {
+    optimizeDeps: {
+      include: ['gitalk'],
+    },
     plugins: [
       GitalkPlugin(options),
     ],
@@ -58,6 +56,9 @@ import { GitalkPlugin } from "vitepress-plugin-gitalk";
 
 export default defineConfig({
   vite: {
+    optimizeDeps: {
+      include: ['gitalk'],
+    },
     plugins: [
       GitalkPlugin({
         id: '{{location.pathname}}',
