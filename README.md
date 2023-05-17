@@ -18,11 +18,12 @@ or
 
 ## Usage
 
-```javascript
+```typescript
+// .vitepress/config.ts
 import { defineConfig } from "vitepress";
-import { GitalkPlugin } from "vitepress-plugin-gitalk";
+import { GitalkPlugin, GitalkOptions } from "vitepress-plugin-gitalk";
 
-const options = {
+const options: GitalkOptions = {
   clientID: 'GitHub Application Client ID',
   clientSecret: 'GitHub Application Client Secret',
   // The repository of store comments
@@ -50,7 +51,8 @@ export default defineConfig({
 
 How to customize the `id` option of gitalk?
 
-```javascript
+```typescript
+// .vitepress/config.ts
 import { defineConfig } from "vitepress";
 import { GitalkPlugin } from "vitepress-plugin-gitalk";
 
